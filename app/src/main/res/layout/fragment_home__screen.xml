@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home_Screen">
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:padding="10dp"
+        android:background="@color/blue">
+
+        <!-- WiFi Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_box"
+                android:text="WiFi"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/wifi_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Bluetooth Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_box"
+                android:text="Bluetooth"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/bluetooth_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- USB Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_box"
+                android:text="USB"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/usb_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Empty state view -->
+    <TextView
+        android:id="@+id/emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No external devices connected"
+        android:textSize="18sp"
+        android:visibility="visible"/>
+
+    <!-- RecyclerView (initially hidden) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deviceRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Settings">
+
+    <!-- Settings Title -->
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Auto Config Toggle Button -->
+    <Switch
+        android:id="@+id/auto_config_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Config"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- Notification On/Off Toggle Button -->
+    <Switch
+        android:id="@+id/notification_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- Footer Text: Built by Logic First -->
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Built by Logic First"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>
