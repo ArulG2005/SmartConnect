@@ -5,18 +5,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:gravity="center_horizontal"
     tools:context=".Settings">
 
     <!-- Settings Title -->
     <TextView
-        android:layout_marginTop="40dp"
         android:id="@+id/settings_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
         android:textSize="20sp"
+        android:textColor="@color/blue"
         android:gravity="center"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="24dp"
+        android:layout_marginTop="40dp" />
 
     <!-- Auto Config Toggle Button -->
     <Switch
@@ -24,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Auto Config"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp" />
 
     <!-- Notification On/Off Toggle Button -->
@@ -33,17 +34,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notifications"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- Store Trusted Content Toggle Button -->
+    <Switch
+        android:id="@+id/store_trusted_content_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store Trusted Content"
+        android:layout_marginTop="16dp" />
+
+    <!-- Vibration Toggle Button -->
+    <Switch
+        android:id="@+id/vibration_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibration"
         android:layout_marginTop="16dp" />
 
     <!-- Footer Text: Built by Logic First -->
     <TextView
         android:id="@+id/footer_text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Built by Logic First"
         android:textSize="14sp"
         android:gravity="center"
-        android:layout_marginTop="32dp" />
+        android:textColor="@color/blue"
+        android:layout_marginTop="82dp" />
 
 </LinearLayout>

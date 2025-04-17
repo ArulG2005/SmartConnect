@@ -17,11 +17,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,8 +100,16 @@ public class History extends Fragment {
                 Log.d("WiFiHistory", "Unable to fetch SSID or device is not connected to a Wi-Fi network.");
             }
         }
-    }
 
+        // Manually add Wi-Fi names to the history
+        addDeviceToHistory("arul", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("deva", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("jillavanan", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("sona-guest-tp", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("Balasastha", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("pushpa", "Previously Connected", "Wi-Fi");
+        addDeviceToHistory("sai", "Previously Connected", "Wi-Fi");
+    }
 
     private void addDeviceToHistory(String deviceName, String status, String type) {
         DeviceHistory deviceHistory = new DeviceHistory(deviceName, status, type);

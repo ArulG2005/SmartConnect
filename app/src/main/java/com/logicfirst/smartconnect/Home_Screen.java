@@ -289,7 +289,7 @@ public class Home_Screen extends Fragment {
     // Send Notification
     private void sendNotification(String title, String message) {
         Notification notification = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.historypng) // Use an appropriate icon here
+                .setSmallIcon(R.drawable.logo) // Use an appropriate icon here
                 .setContentTitle(title)
                 .setContentText(message)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
